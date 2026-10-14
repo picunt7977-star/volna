@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src * data: blob:; media-src * blob:; connect-src *; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:">
+  <title>Volna</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="bg"><div class="bg-art"></div><div class="bg-shade"></div></div>
+
+  <header id="titlebar">
+    <div class="brand"><span class="brand-logo"></span>Volna</div>
+    <div class="drag"></div>
+    <div class="win-btns">
+      <button data-win="min" title="Свернуть"></button>
+      <button data-win="max" title="Развернуть"></button>
+      <button data-win="close" class="close" title="Закрыть"></button>
+    </div>
+  </header>
+
+  <aside id="sidebar">
+    <nav id="nav"></nav>
+    <div id="account"></div>
+  </aside>
+
+  <main id="view"></main>
+
+  <aside id="queue" class="hidden">
+    <div class="queue-head"><h3>Очередь</h3><button class="icon-btn" id="queue-close"></button></div>
+    <div id="queue-list"></div>
+  </aside>
+
+  <footer id="player">
+    <div class="p-left">
+      <img id="p-art" alt="">
+      <div class="p-meta">
+        <div id="p-title">Ничего не играет</div>
+        <a id="p-artist"></a>
+      </div>
+      <button class="icon-btn" id="p-like" title="Нравится (L)"></button>
+      <button class="icon-btn" id="p-dislike" title="Не нравится — убрать из волны"></button>
+    </div>
+    <div class="p-center">
+      <div class="p-controls">
+        <button class="icon-btn" id="p-shuffle" title="Перемешать"></button>
+        <button class="icon-btn" id="p-prev" title="Назад"></button>
+        <button class="play-btn" id="p-play" title="Играть (Пробел)"></button>
+        <button class="icon-btn" id="p-next" title="Дальше"></button>
+        <button class="icon-btn" id="p-repeat" title="Повтор"></button>
+      </div>
+      <div class="p-seek">
+        <span id="p-time">0:00</span>
+        <canvas id="p-wave"></canvas>
+        <span id="p-dur">0:00</span>
+      </div>
+    </div>
+    <div class="p-right">
+      <span id="p-wave-badge" class="hidden"></span>
+      <button class="icon-btn" id="p-lyrics" title="Текст песни (T)"></button>
+      <button class="icon-btn" id="p-queue" title="Очередь"></button>
+      <button class="icon-btn" id="p-mute" title="Звук"></button>
+      <input type="range" id="p-vol" min="0" max="1" step="0.01">
+    </div>
+  </footer>
+
+  <div id="toasts"></div>
+  <audio id="audio" crossorigin="anonymous" preload="auto"></audio>
+
+  <script src="../../node_modules/hls.js/dist/hls.min.js"></script>
+  <script src="icons.js"></script>
+  <script src="covers.js"></script>
+  <script src="util.js"></script>
+  <script src="sc.js"></script>
+  <script src="lyrics.js"></script>
+  <script src="wave.js"></script>
+  <script src="player.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>

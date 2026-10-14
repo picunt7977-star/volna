@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#09090d">
+  <title>Volna</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body class="mobile">
+  <div id="bg"><div class="bg-art"></div><div class="bg-shade"></div></div>
+
+  <header id="titlebar">
+    <div class="brand"><span class="brand-logo"></span>Volna</div>
+    <div class="drag"></div>
+    <div class="win-btns"></div>
+    <button id="tb-acc"></button>
+  </header>
+
+  <main id="view"></main>
+
+  <!-- на телефоне это нижняя панель вкладок -->
+  <aside id="sidebar">
+    <nav id="nav"></nav>
+    <div id="account"></div>
+  </aside>
+
+  <aside id="queue" class="hidden">
+    <div class="queue-head"><h3>Очередь</h3><button class="icon-btn" id="queue-close"></button></div>
+    <div id="queue-list"></div>
+  </aside>
+
+  <!-- мини-плеер; по тапу раскрывается в #np -->
+  <footer id="player">
+    <div class="p-left">
+      <img id="p-art" alt="">
+      <div class="p-meta">
+        <div id="p-title">Ничего не играет</div>
+        <a id="p-artist"></a>
+      </div>
+      <button class="icon-btn" id="p-like" title="Нравится"></button>
+      <button class="icon-btn" id="p-dislike" title="Не нравится — убрать из волны"></button>
+    </div>
+    <div class="p-center">
+      <div class="p-controls">
+        <button class="icon-btn" id="p-shuffle" title="Перемешать"></button>
+        <button class="icon-btn" id="p-prev" title="Назад"></button>
+        <button class="play-btn" id="p-play" title="Играть"></button>
+        <button class="icon-btn" id="p-next" title="Дальше"></button>
+        <button class="icon-btn" id="p-repeat" title="Повтор"></button>
+      </div>
+      <div class="p-seek">
+        <span id="p-time">0:00</span>
+        <canvas id="p-wave"></canvas>
+        <span id="p-dur">0:00</span>
+      </div>
+    </div>
+    <div class="p-right">
+      <span id="p-wave-badge" class="hidden"></span>
+      <button class="icon-btn" id="p-lyrics" title="Текст песни"></button>
+      <button class="icon-btn" id="p-queue" title="Очередь"></button>
+      <button class="icon-btn" id="p-mute" title="Звук"></button>
+      <input type="range" id="p-vol" min="0" max="1" step="0.01">
+    </div>
+  </footer>
+
+  <!-- полноэкранный плеер -->
+  <section id="np">
+    <div class="np-bg"></div>
+    <div class="np-head">
+      <button class="icon-btn" id="np-close" title="Свернуть"></button>
+      <div class="np-src"><small>Сейчас играет</small><b id="np-src"></b></div>
+      <button class="icon-btn" id="np-queue" title="Очередь"></button>
+    </div>
+    <div class="np-art-wrap"><img id="np-art" alt=""></div>
+    <div class="np-meta">
+      <div class="np-text"><div id="np-title"></div><a id="np-artist"></a></div>
+      <div class="np-acts"></div>
+    </div>
+    <div class="np-seek"></div>
+    <div class="np-controls"></div>
+    <div class="np-extra">
+      <button class="icon-btn" id="np-wave" title="Волна по этому треку"></button>
+      <button class="icon-btn" id="np-lyrics" title="Текст песни"></button>
+      <button class="icon-btn" id="np-share" title="Открыть в SoundCloud"></button>
+    </div>
+  </section>
+
+  <div id="toasts"></div>
+  <audio id="audio" preload="auto"></audio>
+
+  <script src="capacitor.js"></script>
+  <script src="bridge.js"></script>
+  <script src="hls.min.js"></script>
+  <script src="icons.js"></script>
+  <script src="covers.js"></script>
+  <script src="util.js"></script>
+  <script src="sc.js"></script>
+  <script src="lyrics.js"></script>
+  <script src="wave.js"></script>
+  <script src="player.js"></script>
+  <script src="ui.js"></script>
+  <script src="mobile.js"></script>
+</body>
+</html>

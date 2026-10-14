@@ -1,0 +1,11 @@
+{
+  "appId": "app.volna.mobile",
+  "appName": "Volna",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#09090d"
+  },
+  "plugins": {
+    "SystemBars": { "style": "DARK" }
+  }
+}

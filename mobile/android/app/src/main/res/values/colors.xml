@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="volna_bg">#09090D</color>
+    <color name="colorPrimary">#09090D</color>
+    <color name="colorPrimaryDark">#09090D</color>
+    <color name="colorAccent">#FF6A1F</color>
+</resources>

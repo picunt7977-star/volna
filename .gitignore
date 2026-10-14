@@ -1,0 +1,10 @@
+node_modules/
+mobile/node_modules/
+# собирается из src/renderer + mobile/web (node mobile/build.mjs)
+mobile/www/
+mobile/android/app/src/main/assets/public/
+mobile/android/app/src/main/assets/capacitor.config.json
+mobile/android/app/src/main/assets/capacitor.plugins.json
+mobile/android/capacitor-cordova-android-plugins/
+*.apk
+*.log

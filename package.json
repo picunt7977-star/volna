@@ -1,0 +1,16 @@
+{
+  "name": "volna",
+  "version": "0.1.0",
+  "description": "Красивый SoundCloud-клиент для Linux с «Моей волной»",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^44.7.0"
+  },
+  "dependencies": {
+    "hls.js": "^1.7.3"
+  }
+}
